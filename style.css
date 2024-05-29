@@ -1,6 +1,8 @@
 /* Google Fonts - Poppins */
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css');
 @import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Poppins:wght@300;700&display=swap');
+
 *
 {
   margin: 0;
@@ -64,6 +66,7 @@ body{
     /* width: 100%; */
     display: flex;
     align-items: center;
+    justify-content: space-between;
     color: #ffff;
     font-size: 1rem;
 
@@ -76,6 +79,10 @@ body{
     text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.5);
     transform: scale(1.4) translateZ(50px);
     transition: 0.25s;
+}
+.social__links ul li h3{
+  margin-bottom: 10px;
+  font-weight: bold;
 }
 .social__links ul li a span{
     line-height: 1.4rem;
@@ -95,56 +102,72 @@ body{
     }
   } */
   .button {
-    width: fit-content;
-    line-height: 1;
-    text-decoration: none;
-    display: inline-flex;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    padding-block: 0.5rem;
+    padding-inline: 1.25rem;
+    background-color: rgb(0 107 179);
+    border-radius: 9999px;
+    display: flex;
     align-items: center;
-    gap: .75rem;
-    background-color: var(--clr);
-    color: #fff;
-    border-radius: 10rem;
-    font-weight: 600;
-    padding: .75rem 1.5rem;
-    padding-left: 20px;
-    white-space: nowrap;
+    justify-content: center;
+    cursor: pointer;
+    color: #ffff;
+    gap: 10px;
+    font-weight: bold;
+    border: 3px solid #ffffff4d;
+    outline: none;
     overflow: hidden;
-    text-overflow: ellipsis;
-    transition: background-color .3s;
+    font-size: 15px;
   }
   
-  .button__icon-wrapper {
-    flex-shrink: 0;
-    width: 25px;
-    height: 25px;
-    position: relative;
-    color: var(--clr);
-    background-color: #fff;
-    border-radius: 50%;
-    display: grid;
-    place-items: center;
-    overflow: hidden;
+  .icon {
+    width: 24px;
+    height: 24px;
+    transition: all 0.3s ease-in-out;
   }
   
   .button:hover {
-    background-color: #000;
+    transform: scale(1.05);
+    border-color: #fff9;
   }
   
-  .button:hover .button__icon-wrapper {
-    color: #000;
+  .button:hover .icon {
+    transform: translate(4px);
   }
   
-  .button__icon-svg--copy {
+  .button:hover::before {
+    animation: shine 1.5s ease-out infinite;
+  }
+  
+  .button::before {
+    content: "";
     position: absolute;
-    transform: translate(-150%, 150%);
+    width: 100px;
+    height: 100%;
+    background-image: linear-gradient(
+      120deg,
+      rgba(255, 255, 255, 0) 30%,
+      rgba(255, 255, 255, 0.8),
+      rgba(255, 255, 255, 0) 70%
+    );
+    top: 0;
+    left: -100px;
+    opacity: 0.6;
   }
   
-  .button:hover .button__icon-svg:first-child {
-    transition: transform .3s ease-in-out;
-    transform: translate(150%, -150%);
+  @keyframes shine {
+    0% {
+      left: -100px;
+    }
+  
+    60% {
+      left: 100%;
+    }
+  
+    to {
+      left: 100%;
+    }
   }
   
-  .button:hover .button__icon-svg--copy {
-    transition: transform .3s ease-in-out .1s;
-    transform: translate(0);
-  }
