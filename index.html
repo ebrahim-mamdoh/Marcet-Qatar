@@ -176,22 +176,58 @@
           
           </a>
         </li>
+        
         </ul>
       </div>
     </div>
 
     <!-- ------------------------------ navbar -->
-    <!-- <nav>
-      <div class="container">
+     <nav>
         <ul>
-          <li><i class="fa-brands fa-facebook"></i></li>
-          <li><i class="fa-brands fa-instagram"></i></li>
-          <li><i class="fa-brands fa-snapchat"></i></li>
-        </ul>
-      </div>
-    </nav> -->
-  
+          <a href="https://www.tiktok.com/@looli.qatar?_t=8mlazyZa8wA&_r=1">
+          <li style="color: #21131a;"  class="icon " onclick="change(this)">
+            <i class="fa-brands fa-tiktok"></i></i>   <span>Tiktok</span>   </li>
+          </a>
 
+          <a href="https://www.instagram.com/looli.qatar?igsh=MzRlODBiNWFlZA==">
+            <li style="color: #fe2e48;"  class="icon " onclick="change(this)">
+              <i class="fa-brands fa-instagram"></i>    <span>Instagram</span>   </li>
+          </a>
+
+          <a href="https://wa.me/+97451221234" >
+            <li style="color: #25d366;"  class="icon active " onclick="change(this)">
+              <i class="fa-brands fa-whatsapp"></i>     <span>Whatsapp</span>   </li>
+          </a>
+
+        <a href="mailto:info@looli-qatar.com"  >
+          <li style="color: #c03828;" class="icon " onclick="change(this)">
+            <i class="fa-regular fa-envelope"></i>    <span>Mail</span> 
+            </li>
+        </a>
+
+        <a href="https://www.facebook.com/profile.php?id=61559865152785&mibextid=ZbWKwL">
+          <li style="color: #0866ff;"  class="icon " onclick="change(this)">
+            <i class="fa-brands fa-facebook"></i> <span>Facebook</span></li>
+        </a>
+          
+        </ul>
+    </nav> 
+
+
+  
+  
+   
+<!-- nav script -->
+
+<script>
+  function change(item){
+      const buttons = document.querySelectorAll('li');
+      buttons.forEach(function(obj){
+          obj.classList.remove("active");
+      });
+      item.classList.add("active");
+  }
+</script>
     
 
     <script
@@ -212,3 +248,5 @@
     <script src="script.js"></script>
   </body>
 </html>
+
+
